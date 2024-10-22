@@ -71,7 +71,7 @@
                         </a>
                     </li>
                     <li class="nxl-item nxl-hasmenu">
-                        <a href= "{% url 'view-book' %}" class="nxl-link">
+                        <a href= "{% url 'view_book' %}" class="nxl-link">
                             <span class="nxl-micon"><i class="feather-airplay"></i></span>
                             <span class="nxl-mtext">View Books</span><span class="nxl-arrow"></span>
                         </a>
@@ -83,9 +83,16 @@
                         </a>
                     </li>
                     <li class="nxl-item nxl-hasmenu">
-                        <a href= "{% url 'add-book' %}" class="nxl-link">
+                        <a href= "{% url 'borrow-book' %}" class="nxl-link">
                             <span class="nxl-micon"><i class="feather-airplay"></i></span>
                             <span class="nxl-mtext">Borrow Books</span><span class="nxl-arrow"></span>
+                        </a>
+                    </li>
+
+                    <li class="nxl-item nxl-hasmenu">
+                        <a href= "{% url 'borrowed-books' %}" class="nxl-link">
+                            <span class="nxl-micon"><i class="feather-airplay"></i></span>
+                            <span class="nxl-mtext">Borrowed Books</span><span class="nxl-arrow"></span>
                         </a>
                     </li>
                     <li class="nxl-item nxl-hasmenu">

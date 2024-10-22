@@ -3,7 +3,7 @@
 <html lang="zxx">
 
 
-<!-- Mirrored from bestwpware.com/html/tf/duralux-demo/proposal-create.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Jun 2024 06:58:36 GMT -->
+<!-- Mirrored from bestwpware.com/html/tf/duralux-demo/proposal.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Jun 2024 06:58:31 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge">
@@ -13,7 +13,7 @@
     <meta name="author" content="WRAPCODERS">
     <!--! The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags !-->
     <!--! BEGIN: Apps Title-->
-    <title>Imara Library System || Add Book</title>
+    <title>Imara Library System || View Books </title>
     <!--! END:  Apps Title-->
     <!--! BEGIN: Favicon-->
     <link rel="shortcut icon" type="image/x-icon" href= "{% static "assets/images/favicon.ico" %}">
@@ -23,12 +23,13 @@
     <!--! END: Bootstrap CSS-->
     <!--! BEGIN: Vendors CSS-->
     <link rel="stylesheet" type="text/css" href= "{% static "assets/vendors/css/vendors.min.css" %}">
+    <link rel="stylesheet" type="text/css" href= "{% static "assets/vendors/css/dataTables.bs5.min.css" %}">
     <link rel="stylesheet" type="text/css" href= "{% static "assets/vendors/css/tagify.min.css" %}">
     <link rel="stylesheet" type="text/css" href= "{% static "assets/vendors/css/tagify-data.min.css" %}">
     <link rel="stylesheet" type="text/css" href= "{% static "assets/vendors/css/quill.min.css" %}">
     <link rel="stylesheet" type="text/css" href= "{% static "assets/vendors/css/select2.min.css" %}">
     <link rel="stylesheet" type="text/css" href= "{% static "assets/vendors/css/select2-theme.min.css" %}">
-    <link rel="stylesheet" type="text/css" href= "{% static "assets/vendors/css/datepicker.min.css" %}">
+    <link href="{% static "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.cs" %}" rel="stylesheet">
     <!--! END: Vendors CSS-->
     <!--! BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href= "{% static "assets/css/theme.min.css" %}">
@@ -98,7 +99,7 @@
                     <li class="nxl-item nxl-hasmenu">
                         <a href="javascript:void(0);" class="nxl-link">
                             <span class="nxl-micon"><i class="feather-at-sign"></i></span>
-                            <span class="nxl-mtext">Proposal</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
+                            <span class="nxl-mtext">View Books</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
                         </a>
                         <ul class="nxl-submenu">
                             <li class="nxl-item"><a class="nxl-link" href="proposal.html">Proposal</a></li>
@@ -388,33 +389,6 @@
                                         <a href="reports-timesheets.html" class="dropdown-item">
                                             <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
                                             <span>Timesheets Report</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="dropdown nxl-level-menu">
-                                    <a href="javascript:void(0);" class="dropdown-item">
-                                        <span class="hstack">
-                                            <i class="feather-at-sign"></i>
-                                            <span>Proposal</span>
-                                        </span>
-                                        <i class="feather-chevron-right ms-auto me-0"></i>
-                                    </a>
-                                    <div class="dropdown-menu nxl-h-dropdown">
-                                        <a href="proposal.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Proposal</span>
-                                        </a>
-                                        <a href="proposal-view.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Proposal View</span>
-                                        </a>
-                                        <a href="proposal-edit.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Proposal Edit</span>
-                                        </a>
-                                        <a href="proposal-create.html" class="dropdown-item">
-                                            <i class="wd-5 ht-5 bg-gray-500 rounded-circle me-3"></i>
-                                            <span>Proposal Create</span>
                                         </a>
                                     </div>
                                 </div>
@@ -812,7 +786,7 @@
                                                     <p class="fs-12 text-muted mb-0 text-truncate-3-line">We are ready to build custom applications.</p>
                                                 </div>
                                                 <div class="mt-2 mt-lg-0">
-                                                    <a href="https://bestwpware.com/cdn-cgi/l/email-protection#493e3b28392a262d2c3b3a092e24282025672a2624" class="fs-13 fw-bold text-primary">Contact Us &rarr;</a>
+                                                    <a href="https://bestwpware.com/cdn-cgi/l/email-protection#a7d0d5c6d7c4c8c3c2d5d4e7c0cac6cecb89c4c8ca" class="fs-13 fw-bold text-primary">Contact Us &rarr;</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1011,10 +985,10 @@
                                                 </div>
                                                 <div class="col-xl-4">
                                                     <div class="nxl-mega-menu-image">
-                                                        <img src= "{% static "assets/images/banner/1.jpg" %}" alt="" class="img-fluid">
+                                                        <img src= "{% static "assets/images/banner/1.jpg" %}" v alt="" class="img-fluid">
                                                     </div>
                                                     <div class="mt-4">
-                                                        <a href="https://bestwpware.com/cdn-cgi/l/email-protection#760104170615191213040536111b171f1a5815191b" class="fs-13 fw-bold">View all resources on Duralux &rarr;</a>
+                                                        <a href="https://bestwpware.com/cdn-cgi/l/email-protection#84f3f6e5f4e7ebe0e1f6f7c4e3e9e5ede8aae7ebe9" class="fs-13 fw-bold">View all resources on Duralux &rarr;</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1121,7 +1095,7 @@
                                                         <div class="carousel-inner rounded-3">
                                                             <div class="carousel-item active">
                                                                 <div class="nxl-mega-menu-image">
-                                                                    <img src= "{% static "assets/images/banner/6.jpg" %}" alt="" class="img-fluid d-block w-100">
+                                                                    <img src= "{% static "assets/images/banner/6.jpg" %}" v alt="" class="img-fluid d-block w-100">
                                                                 </div>
                                                                 <div class="carousel-caption">
                                                                     <h5 class="carousel-caption-title text-truncate-1-line">Shopify eCommerce Store</h5>
@@ -1130,7 +1104,7 @@
                                                             </div>
                                                             <div class="carousel-item">
                                                                 <div class="nxl-mega-menu-image">
-                                                                    <img src= "{% static "assets/images/banner/5.jpg" %}" alt="" class="img-fluid d-block w-100">
+                                                                    <img src= "{% static "assets/images/banner/5.jpg" %}" v alt="" class="img-fluid d-block w-100">
                                                                 </div>
                                                                 <div class="carousel-caption">
                                                                     <h5 class="carousel-caption-title text-truncate-1-line">iOS Apps Development</h5>
@@ -1139,7 +1113,7 @@
                                                             </div>
                                                             <div class="carousel-item">
                                                                 <div class="nxl-mega-menu-image">
-                                                                    <img src= "{% static "assets/images/banner/4.jpg" %}" alt="" class="img-fluid d-block w-100">
+                                                                    <img src= "{% static "assets/images/banner/4.jpg" %}" v alt="" class="img-fluid d-block w-100">
                                                                 </div>
                                                                 <div class="carousel-caption">
                                                                     <h5 class="carousel-caption-title text-truncate-1-line">Figma Dashboard Design</h5>
@@ -1148,7 +1122,7 @@
                                                             </div>
                                                             <div class="carousel-item">
                                                                 <div class="nxl-mega-menu-image">
-                                                                    <img src= "{% static "assets/images/banner/3.jpg" %}" alt="" class="img-fluid d-block w-100">
+                                                                    <img src= "{% static "assets/images/banner/3.jpg" %}" v alt="" class="img-fluid d-block w-100">
                                                                 </div>
                                                                 <div class="carousel-caption">
                                                                     <h5 class="carousel-caption-title text-truncate-1-line">React Dashboard Design</h5>
@@ -1157,7 +1131,7 @@
                                                             </div>
                                                             <div class="carousel-item">
                                                                 <div class="nxl-mega-menu-image">
-                                                                    <img src= "{% static "assets/images/banner/2.jpg" %}" alt="" class="img-fluid d-block w-100">
+                                                                    <img src= "{% static "assets/images/banner/2.jpg" %}" v alt="" class="img-fluid d-block w-100">
                                                                 </div>
                                                                 <div class="carousel-caption">
                                                                     <h5 class="carousel-caption-title text-truncate-1-line">Standup Team Meeting</h5>
@@ -1166,7 +1140,7 @@
                                                             </div>
                                                             <div class="carousel-item">
                                                                 <div class="nxl-mega-menu-image">
-                                                                    <img src= "{% static "assets/images/banner/1.jpg" %}" alt="" class="img-fluid d-block w-100">
+                                                                    <img src= "{% static "assets/images/banner/1.jpg" %}" v alt="" class="img-fluid d-block w-100">
                                                                 </div>
                                                                 <div class="carousel-caption">
                                                                     <h5 class="carousel-caption-title text-truncate-1-line">Zoom Team Meeting</h5>
@@ -1242,7 +1216,7 @@
                                                                 <div class="col-xl-6">
                                                                     <div class="d-lg-flex align-items-center gap-3">
                                                                         <div class="wd-150 rounded-3">
-                                                                            <img src= "{% static "assets/images/banner/1.jpg" %}" alt="" class="img-fluid rounded-3">
+                                                                            <img src= "{% static "assets/images/banner/1.jpg" %}" v alt="" class="img-fluid rounded-3">
                                                                         </div>
                                                                         <div class="mt-3 mt-lg-0 ms-lg-3 item-text">
                                                                             <a href="javascript:void(0);">
@@ -1261,7 +1235,7 @@
                                                                 <div class="col-xl-6">
                                                                     <div class="d-lg-flex align-items-center gap-3">
                                                                         <div class="wd-150 rounded-3">
-                                                                            <img src= "{% static "assets/images/banner/2.jpg" %}" alt="" class="img-fluid rounded-3">
+                                                                            <img src= "{% static "assets/images/banner/2.jpg" %}" v alt="" class="img-fluid rounded-3">
                                                                         </div>
                                                                         <div class="mt-3 mt-lg-0 ms-lg-3 item-text">
                                                                             <a href="javascript:void(0);">
@@ -1280,7 +1254,7 @@
                                                                 <div class="col-xl-6">
                                                                     <div class="d-lg-flex align-items-center gap-3">
                                                                         <div class="wd-150 rounded-3">
-                                                                            <img src= "{% static "assets/images/banner/3.jpg" %}" alt="" class="img-fluid rounded-3">
+                                                                            <img src= "{% static "assets/images/banner/3.jpg" %}" v alt="" class="img-fluid rounded-3">
                                                                         </div>
                                                                         <div class="mt-3 mt-lg-0 ms-lg-3 item-text">
                                                                             <a href="javascript:void(0);">
@@ -1299,7 +1273,7 @@
                                                                 <div class="col-xl-6">
                                                                     <div class="d-lg-flex align-items-center gap-3">
                                                                         <div class="wd-150 rounded-3">
-                                                                            <img src= "{% static "assets/images/banner/4.jpg" %}" alt="" class="img-fluid rounded-3">
+                                                                            <img src= "{% static "assets/images/banner/4.jpg" %}" v alt="" class="img-fluid rounded-3">
                                                                         </div>
                                                                         <div class="mt-3 mt-lg-0 ms-lg-3 item-text">
                                                                             <a href="javascript:void(0);">
@@ -1427,7 +1401,7 @@
                                                                 <div class="carousel-inner rounded-3">
                                                                     <div class="carousel-item active">
                                                                         <div class="nxl-mega-menu-image">
-                                                                            <img src= "{% static "assets/images/banner/6.jpg" %}" alt="" class="img-fluid d-block w-100">
+                                                                            <img src= "{% static "assets/images/banner/6.jpg" %}" v alt="" class="img-fluid d-block w-100">
                                                                         </div>
                                                                         <div class="carousel-caption">
                                                                             <h5 class="carousel-caption-title text-truncate-1-line">Shopify eCommerce Store</h5>
@@ -1436,7 +1410,7 @@
                                                                     </div>
                                                                     <div class="carousel-item">
                                                                         <div class="nxl-mega-menu-image">
-                                                                            <img src= "{% static "assets/images/banner/5.jpg" %}" alt="" class="img-fluid d-block w-100">
+                                                                            <img src= "{% static "assets/images/banner/5.jpg" %}" v alt="" class="img-fluid d-block w-100">
                                                                         </div>
                                                                         <div class="carousel-caption">
                                                                             <h5 class="carousel-caption-title text-truncate-1-line">iOS Apps Development</h5>
@@ -1445,7 +1419,7 @@
                                                                     </div>
                                                                     <div class="carousel-item">
                                                                         <div class="nxl-mega-menu-image">
-                                                                            <img src= "{% static "assets/images/banner/4.jpg" %}" alt="" class="img-fluid d-block w-100">
+                                                                            <img src= "{% static "assets/images/banner/4.jpg" %}" v alt="" class="img-fluid d-block w-100">
                                                                         </div>
                                                                         <div class="carousel-caption">
                                                                             <h5 class="carousel-caption-title text-truncate-1-line">Figma Dashboard Design</h5>
@@ -1454,7 +1428,7 @@
                                                                     </div>
                                                                     <div class="carousel-item">
                                                                         <div class="nxl-mega-menu-image">
-                                                                            <img src= "{% static "assets/images/banner/3.jpg" %}" alt="" class="img-fluid d-block w-100">
+                                                                            <img src= "{% static "assets/images/banner/3.jpg" %}" v alt="" class="img-fluid d-block w-100">
                                                                         </div>
                                                                         <div class="carousel-caption">
                                                                             <h5 class="carousel-caption-title text-truncate-1-line">React Dashboard Design</h5>
@@ -1463,7 +1437,7 @@
                                                                     </div>
                                                                     <div class="carousel-item">
                                                                         <div class="nxl-mega-menu-image">
-                                                                            <img src= "{% static "assets/images/banner/2.jpg" %}" alt="" class="img-fluid d-block w-100">
+                                                                            <img src= "{% static "assets/images/banner/2.jpg" %}" v alt="" class="img-fluid d-block w-100">
                                                                         </div>
                                                                         <div class="carousel-caption">
                                                                             <h5 class="carousel-caption-title text-truncate-1-line">Standup Team Meeting</h5>
@@ -1472,7 +1446,7 @@
                                                                     </div>
                                                                     <div class="carousel-item">
                                                                         <div class="nxl-mega-menu-image">
-                                                                            <img src= "{% static "assets/images/banner/1.jpg" %}" alt="" class="img-fluid d-block w-100">
+                                                                            <img src= "{% static "assets/images/banner/1.jpg" %}" v alt="" class="img-fluid d-block w-100">
                                                                         </div>
                                                                         <div class="carousel-caption">
                                                                             <h5 class="carousel-caption-title text-truncate-1-line">Zoom Team Meeting</h5>
@@ -1578,10 +1552,10 @@
                                                         </div>
                                                         <div class="col-xxl-3 offset-xxl-1 col-xl-4">
                                                             <div class="nxl-mega-menu-image">
-                                                                <img src= "{% static "assets/images/banner/1.jpg" %}" alt="" class="img-fluid">
+                                                                <img src= "{% static "assets/images/banner/1.jpg" %}" v alt="" class="img-fluid">
                                                             </div>
                                                             <div class="mt-4">
-                                                                <a href="https://bestwpware.com/cdn-cgi/l/email-protection#2e595c4f5e4d414a4b5c5d6e49434f4742004d4143" class="fs-13 fw-bold">View all features on Duralux &rarr;</a>
+                                                                <a href="https://bestwpware.com/cdn-cgi/l/email-protection#2453564554474b40415657644349454d480a474b49" class="fs-13 fw-bold">View all features on Duralux &rarr;</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1602,7 +1576,7 @@
                                                                 <div class="col-xxl-4 col-lg-6">
                                                                     <div class="d-flex align-items-center gap-3">
                                                                         <div class="wd-100 rounded-3">
-                                                                            <img src= "{% static "assets/images/banner/1.jpg" %}" alt="" class="img-fluid rounded-3 border border-3">
+                                                                            <img src= "{% static "assets/images/banner/1.jpg" %}" v alt="" class="img-fluid rounded-3 border border-3">
                                                                         </div>
                                                                         <div>
                                                                             <a href="javascript:void(0);">
@@ -1616,7 +1590,7 @@
                                                                 <div class="col-xxl-4 col-lg-6">
                                                                     <div class="d-flex align-items-center gap-3">
                                                                         <div class="wd-100 rounded-3">
-                                                                            <img src= "{% static "assets/images/banner/2.jpg" %}" alt="" class="img-fluid rounded-3 border border-3">
+                                                                            <img src= "{% static "assets/images/banner/2.jpg" %}" v alt="" class="img-fluid rounded-3 border border-3">
                                                                         </div>
                                                                         <div>
                                                                             <a href="javascript:void(0);">
@@ -1630,7 +1604,7 @@
                                                                 <div class="col-xxl-4 col-lg-6">
                                                                     <div class="d-flex align-items-center gap-3">
                                                                         <div class="wd-100 rounded-3">
-                                                                            <img src= "{% static "assets/images/banner/3.jpg" %}" alt="" class="img-fluid rounded-3 border border-3">
+                                                                            <img src= "{% static "assets/images/banner/3.jpg" %}" v alt="" class="img-fluid rounded-3 border border-3">
                                                                         </div>
                                                                         <div>
                                                                             <a href="javascript:void(0);">
@@ -1644,7 +1618,7 @@
                                                                 <div class="col-xxl-4 col-lg-6">
                                                                     <div class="d-flex align-items-center gap-3">
                                                                         <div class="wd-100 rounded-3">
-                                                                            <img src= "{% static "assets/images/banner/4.jpg" %}" alt="" class="img-fluid rounded-3 border border-3">
+                                                                            <img src= "{% static "assets/images/banner/4.jpg" %}" v alt="" class="img-fluid rounded-3 border border-3">
                                                                         </div>
                                                                         <div>
                                                                             <a href="javascript:void(0);">
@@ -1658,7 +1632,7 @@
                                                                 <div class="col-xxl-4 col-lg-6">
                                                                     <div class="d-flex align-items-center gap-3">
                                                                         <div class="wd-100 rounded-3">
-                                                                            <img src= "{% static "assets/images/banner/5.jpg" %}" alt="" class="img-fluid rounded-3 border border-3">
+                                                                            <img src= "{% static "assets/images/banner/5.jpg" %}" v alt="" class="img-fluid rounded-3 border border-3">
                                                                         </div>
                                                                         <div>
                                                                             <a href="javascript:void(0);">
@@ -1672,7 +1646,7 @@
                                                                 <div class="col-xxl-4 col-lg-6">
                                                                     <div class="d-flex align-items-center gap-3">
                                                                         <div class="wd-100 rounded-3">
-                                                                            <img src= "{% static "assets/images/banner/6.jpg" %}" alt="" class="img-fluid rounded-3 border border-3">
+                                                                            <img src= "{% static "assets/images/banner/6.jpg" %}" v alt="" class="img-fluid rounded-3 border border-3">
                                                                         </div>
                                                                         <div>
                                                                             <a href="javascript:void(0);">
@@ -1805,7 +1779,7 @@
                                             </div>
                                             <div>
                                                 <a href="javascript:void(0);" class="font-body fw-bold d-block mb-1">Alexandra Della</a>
-                                                <p class="fs-11 text-muted mb-0"><a href="https://bestwpware.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="16777a736e3872737a7a77567963627a79797d3875797b">[email&#160;protected]</a></p>
+                                                <p class="fs-11 text-muted mb-0"><a href="https://bestwpware.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9efff2fbe6b0fafbf2f2ffdef1ebeaf2f1f1f5b0fdf1f3">[email&#160;protected]</a></p>
                                             </div>
                                         </div>
                                         <a href="javascript:void(0);" class="avatar-text avatar-md">
@@ -1819,7 +1793,7 @@
                                             </div>
                                             <div>
                                                 <a href="javascript:void(0);" class="font-body fw-bold d-block mb-1">Green Cute</a>
-                                                <p class="fs-11 text-muted mb-0"><a href="https://bestwpware.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2d4a5f484843034e5859486d42585941424246034e4240">[email&#160;protected]</a></p>
+                                                <p class="fs-11 text-muted mb-0"><a href="https://bestwpware.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a9cedbccccc787cadcddcce9c6dcddc5c6c6c287cac6c4">[email&#160;protected]</a></p>
                                             </div>
                                         </div>
                                         <a href="javascript:void(0);" class="avatar-text avatar-md">
@@ -1833,7 +1807,7 @@
                                             </div>
                                             <div>
                                                 <a href="javascript:void(0);" class="font-body fw-bold d-block mb-1">Malanie Hanvey</a>
-                                                <p class="fs-11 text-muted mb-0"><a href="https://bestwpware.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ee3efe2efe0e7eba0efe0f8ebf7cee1fbfae2e1e1e5a0ede1e3">[email&#160;protected]</a></p>
+                                                <p class="fs-11 text-muted mb-0"><a href="https://bestwpware.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6b060a070a05020e450a051d0e122b041e1f0704040045080406">[email&#160;protected]</a></p>
                                             </div>
                                         </div>
                                         <a href="javascript:void(0);" class="avatar-text avatar-md">
@@ -1847,7 +1821,7 @@
                                             </div>
                                             <div>
                                                 <a href="javascript:void(0);" class="font-body fw-bold d-block mb-1">Kenneth Hune</a>
-                                                <p class="fs-11 text-muted mb-0"><a href="https://bestwpware.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e48f818a908cca8c918a81a48b9190888b8b8fca878b89">[email&#160;protected]</a></p>
+                                                <p class="fs-11 text-muted mb-0"><a href="https://bestwpware.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4b202e253f2365233e252e0b243e3f2724242065282426">[email&#160;protected]</a></p>
                                             </div>
                                         </div>
                                         <a href="javascript:void(0);" class="avatar-text avatar-md">
@@ -1861,7 +1835,7 @@
                                             </div>
                                             <div>
                                                 <a href="javascript:void(0);" class="font-body fw-bold d-block mb-1">Archie Cantones</a>
-                                                <p class="fs-11 text-muted mb-0"><a href="https://bestwpware.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4d2c3f2e252428632e2223283e0d22383921222226632e2220">[email&#160;protected]</a></p>
+                                                <p class="fs-11 text-muted mb-0"><a href="https://bestwpware.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="91f0e3f2f9f8f4bff2fefff4e2d1fee4e5fdfefefabff2fefc">[email&#160;protected]</a></p>
                                             </div>
                                         </div>
                                         <a href="javascript:void(0);" class="avatar-text avatar-md">
@@ -2126,7 +2100,7 @@
                                     <img src= "{% static "assets/images/avatar/1.png" %}" alt="user-image" class="img-fluid user-avtar">
                                     <div>
                                         <h6 class="text-dark mb-0">Alexandra Della <span class="badge bg-soft-success text-success ms-1">PRO</span></h6>
-                                        <span class="fs-12 fw-medium text-muted"><a href="https://bestwpware.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="62030e071a4c06070e0e03220d17160e0d0d094c010d0f">[email&#160;protected]</a></span>
+                                        <span class="fs-12 fw-medium text-muted"><a href="https://bestwpware.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="40212c25386e24252c2c21002f35342c2f2f2b6e232f2d">[email&#160;protected]</a></span>
                                     </div>
                                 </div>
                             </div>
@@ -2272,11 +2246,11 @@
             <div class="page-header">
                 <div class="page-header-left d-flex align-items-center">
                     <div class="page-header-title">
-                        <h5 class="m-b-10">Proposal</h5>
+                        <h5 class="m-b-10">View Books</h5>
                     </div>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-                        <li class="breadcrumb-item">Borrow Book</li>
+                        <li class="breadcrumb-item">Proposal</li>
                     </ul>
                 </div>
                 <div class="page-header-right ms-auto">
@@ -2287,6 +2261,95 @@
                                 <span>Back</span>
                             </a>
                         </div>
+                        <div class="d-flex align-items-center gap-2 page-header-right-items-wrapper">
+                            <a href="javascript:void(0);" class="btn btn-icon btn-light-brand" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                <i class="feather-bar-chart"></i>
+                            </a>
+                            <div class="dropdown">
+                                <a class="btn btn-icon btn-light-brand" data-bs-toggle="dropdown" data-bs-offset="0, 12" data-bs-auto-close="outside">
+                                    <i class="feather-filter"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        <i class="feather-eye me-3"></i>
+                                        <span>All</span>
+                                    </a>
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        <i class="feather-send me-3"></i>
+                                        <span>Sent</span>
+                                    </a>
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        <i class="feather-book-open me-3"></i>
+                                        <span>Open</span>
+                                    </a>
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        <i class="feather-archive me-3"></i>
+                                        <span>Draft</span>
+                                    </a>
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        <i class="feather-bell me-3"></i>
+                                        <span>Revised</span>
+                                    </a>
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        <i class="feather-shield-off me-3"></i>
+                                        <span>Declined</span>
+                                    </a>
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        <i class="feather-check me-3"></i>
+                                        <span>Accepted</span>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        <i class="feather-briefcase me-3"></i>
+                                        <span>Leads</span>
+                                    </a>
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        <i class="feather-wifi-off me-3"></i>
+                                        <span>Expired</span>
+                                    </a>
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        <i class="feather-users me-3"></i>
+                                        <span>Customers</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a class="btn btn-icon btn-light-brand" data-bs-toggle="dropdown" data-bs-offset="0, 12" data-bs-auto-close="outside">
+                                    <i class="feather-paperclip"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        <i class="bi bi-filetype-pdf me-3"></i>
+                                        <span>PDF</span>
+                                    </a>
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        <i class="bi bi-filetype-csv me-3"></i>
+                                        <span>CSV</span>
+                                    </a>
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        <i class="bi bi-filetype-xml me-3"></i>
+                                        <span>XML</span>
+                                    </a>
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        <i class="bi bi-filetype-txt me-3"></i>
+                                        <span>Text</span>
+                                    </a>
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        <i class="bi bi-filetype-exe me-3"></i>
+                                        <span>Excel</span>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="javascript:void(0);" class="dropdown-item">
+                                        <i class="bi bi-printer me-3"></i>
+                                        <span>Print</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="proposal-create.html" class="btn btn-primary">
+                                <i class="feather-plus me-2"></i>
+                                <span>New Proposal</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="d-md-none d-flex align-items-center">
                         <a href="javascript:void(0)" class="page-header-right-open-toggle">
@@ -2295,67 +2358,123 @@
                     </div>
                 </div>
             </div>
-            <!-- [ page-header ] end -->
-            <!-- [ Main Content ] start -->
-<div class="main-content" >
-    <div class="row">
-        <div class="col-xl-6">
-            <div class="card stretch stretch-full">
-                <div class="card-body">
-                    <!-- Form Starts Here -->
-                    <form method="POST" action="{% url 'borrow-book' %}">
-                        {% csrf_token %}
-                    
-                        <!-- Student Field (auto-filled and read-only) -->
-                        <div class="mb-3">
-                            <label for="student" class="form-label">Student</label>
-                            <input type="text" name="student" id="student" class="form-control" value="{{ request.user.username }}" readonly>
+            <div id="collapseOne" class="accordion-collapse collapse page-header-collapse">
+                <div class="accordion-body pb-2">
+                    <div class="row">
+                        <div class="col-xxl-3 col-md-6">
+                            <div class="card stretch stretch-full">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="javascript:void(0);" class="fw-bold d-block">
+                                            <span class="d-block">Paid</span>
+                                            <span class="fs-20 fw-bold d-block">78/100</span>
+                                        </a>
+                                        <div class="progress-1"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    
-                        <!-- Book Selection Field -->
-                        <div class="mb-3">
-                            <label for="book" class="form-label">Book</label>
-                            <select name="book" id="book" class="form-control" required>
-                                <option value="">Select a book</option>
-                                {% for book in books %}
-                                    <option value="{{ book.id }}">{{ book.title }} ({{ book.available_copies }} copies available)</option>
-                                {% endfor %}
-                            </select>
+                        <div class="col-xxl-3 col-md-6">
+                            <div class="card stretch stretch-full">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="javascript:void(0);" class="fw-bold d-block">
+                                            <span class="d-block">Unpaid</span>
+                                            <span class="fs-20 fw-bold d-block">38/50</span>
+                                        </a>
+                                        <div class="progress-2"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    
-                        <!-- Due Date Field -->
-                        <div class="mb-3">
-                            <label for="due_date" class="form-label">Due Date</label>
-                            <input type="date" name="due_date" id="due_date" class="form-control" required>
+                        <div class="col-xxl-3 col-md-6">
+                            <div class="card stretch stretch-full">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="javascript:void(0);" class="fw-bold d-block">
+                                            <span class="d-block">Overdue</span>
+                                            <span class="fs-20 fw-bold d-block">15/30</span>
+                                        </a>
+                                        <div class="progress-3"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    
-                        <!-- Submit Button -->
-                        <button type="submit" class="btn btn-primary">Borrow Book</button>
-                    </form>
-                    
-                    <script>
-                        $(document).ready(function() {
-                            $('#book').select2({
-                                placeholder: "Select a book",
-                                allowClear: true
-                            });
-                        });
-                    </script>
-                    
-                    <!-- Form Ends Here -->
+                        <div class="col-xxl-3 col-md-6">
+                            <div class="card stretch stretch-full">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="javascript:void(0);" class="fw-bold d-block">
+                                            <span class="d-block">Draft</span>
+                                            <span class="fs-20 fw-bold d-block">3/10</span>
+                                        </a>
+                                        <div class="progress-4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<!-- [ Main Content ] end -->
+            <!-- [ page-header ] end -->
+            <!-- [ Main Content ] start -->
+            <div class="main-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card stretch stretch-full">
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <div class="container mt-5">
+                                        <h3 class="mb-4">List of Books Borrowed</h3>
+                                        
+                                        <table class="table table-striped table-hover mt-4">
+                                            <thead style="background-color: #f0ad4e; color: white;">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Book Title</th>
+                                                    <th>Borrow Date</th>
+                                                    <th>Due Date</th>
+                                                    <th>Returned</th>
+                                                    <th>Return Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- Loop through the list of borrow records and display their details -->
+                                                {% for borrow in borrows %}
+                                                <tr>
+                                                    <td>{{ forloop.counter }}</td>
+                                                    <td>{{ borrow.book.title }}</td>
+                                                    <td>{{ borrow.borrow_date|date:"Y-m-d H:i" }}</td>
+                                                    <td>{{ borrow.due_date|date:"Y-m-d" }}</td>
+                                                    <td>{{ borrow.returned|yesno:"Yes,No" }}</td>
+                                                    <td>{{ borrow.return_date|date:"Y-m-d H:i" }}</td>
+                                                </tr>
+                                                {% empty %}
+                                                <tr>
+                                                    <td colspan="6" class="text-center">No books borrowed yet.</td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                        
 
+                                        <th>Title</th>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [ Main Content ] end -->
         </div>
         <!-- [ Footer ] start -->
         <footer class="footer">
             <p class="fs-11 text-muted fw-medium text-uppercase mb-0 copyright">
                 <span>Copyright ©</span>
-               
+                <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+                    document.write(new Date().getFullYear());
+                </script>
             </p>
             <div class="d-flex align-items-center gap-4">
                 <a href="javascript:void(0);" class="fs-11 fw-semibold text-uppercase">Help</a>
@@ -2371,7 +2490,7 @@
     <!--! ================================================================ !-->
     <!--! [Start] Sent Proposal l !-->
     <!--! ================================================================ !-->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="proposalSent">
+    {% comment %} <div class="offcanvas offcanvas-end" tabindex="-1" id="proposalSent">
         <div class="offcanvas-header ht-80 px-4 border-bottom border-gray-5">
             <div>
                 <h2 class="fs-16 fw-bold text-truncate-1-line">Sent Proposal</h2>
@@ -2410,11 +2529,11 @@
                 <label class="form-label">Messages:</label>
                 <div data-editor-target="editor" class="ht-200"></div>
             </div>
-        </div>
-        <div class="px-4 gap-2 d-flex align-items-center ht-80 border border-end-0 border-gray-2">
+        </div> {% endcomment %}
+        {% comment %} <div class="px-4 gap-2 d-flex align-items-center ht-80 border border-end-0 border-gray-2">
             <a href="javascript:void(0);" class="btn btn-primary w-50" data-alert-target="#alertMessage">Sent Proposal</a>
             <a href="javascript:void(0);" class="btn btn-danger w-50" data-bs-dismiss="offcanvas">Cancel</a>
-        </div>
+        </div> {% endcomment %}
     </div>
     <!--! ================================================================ !-->
     <!--! [End] Sent Proposal !-->
@@ -2938,75 +3057,24 @@
     <!--! BEGIN: Vendors JS !-->
     <script src= "{% static "assets/vendors/js/vendors.min.js" %}"></script>
     <!-- vendors.min.js"{always must need to be top} -->
-    <script src= "{% static 'assets/vendors/js/tagify.min.js' %}"></script>
-    <script src="{% static 'assets/vendors/js/tagify.min.js' %}"></script>
-    <script src= "{% static 'assets/vendors/js/tagify-data.min.js' %}"></script>
-    <script src= "{% static 'assets/vendors/js/quill.min.js' %}"></script>
-    <script src="{% static 'assets/vendors/js/select2.min.js' %}"></script>
-    <script src="{% static 'assets/vendors/js/select2-active.min.js' %}"></script>
-    <script src="{% static 'assets/vendors/js/datepicker.min.js' %}"></script>
+    <script src= "{% static "assets/vendors/js/circle-progress.min.js" %}"></script>
+    <script src= "{% static "assets/vendors/js/dataTables.min.js" %}"></script>
+    <script src= "{% static "assets/vendors/js/dataTables.bs5.min.js" %}"></script>
+    <script src= "{% static "assets/vendors/js/tagify.min.js" %}"></script>
+    <script src= "{% static "assets/vendors/js/tagify-data.min.js" %}"></script>
+    <script src= "{% static "assets/vendors/js/quill.min.js" %}"></script>
+    <script src= "{% static "assets/vendors/js/select2.min.js" %}"></script>
+    <script src= "{% static "assets/vendors/js/select2-active.min.js" %}"></script>
     <!--! END: Vendors JS !-->
     <!--! BEGIN: Apps Init  !-->
-    <script src="{% static 'assets/js/common-init.min.js' %}"></script>
-    <script src="{% static 'assets/js/proposal-create-init.min.js' %}"></script>
+    <script src= "{% static "assets/js/common-init.min.js" %}"></script>
+    <script src= "{% static "assets/js/proposal-init.min.js" %}"></script>
     <!--! END: Apps Init !-->
     <!--! BEGIN: Theme Customizer  !-->
-    <script src="{% static 'assets/js/theme-customizer-init.min.js' %}"></script>
+    <script src= "{% static "assets/js/theme-customizer-init.min.js" %}"></script>
     <!--! END: Theme Customizer !-->
-    <script>
-        $(document).ready(function() {
-            var i = 1;
-            $("#add_row").click(function() {
-                b = i - 1;
-                $("#addr" + i)
-                    .html($("#addr" + b).html())
-                    .find("td:first-child")
-                    .html(i + 1);
-                $("#tab_logic").append('<tr id="addr' + (i + 1) + '"></tr>');
-                i++;
-            });
-            $("#delete_row").click(function() {
-                if (i > 1) {
-                    $("#addr" + (i - 1)).html("");
-                    i--;
-                }
-                calc();
-            });
-            $("#tab_logic tbody").on("keyup change", function() {
-                calc();
-            });
-            $("#tax").on("keyup change", function() {
-                calc_total();
-            });
-        });
-
-        function calc() {
-            $("#tab_logic tbody tr").each(function(i, element) {
-                var html = $(this).html();
-                if (html != "") {
-                    var qty = $(this).find(".qty").val();
-                    var price = $(this).find(".price").val();
-                    $(this)
-                        .find(".total")
-                        .val(qty * price);
-                    calc_total();
-                }
-            });
-        }
-
-        function calc_total() {
-            total = 0;
-            $(".total").each(function() {
-                total += parseInt($(this).val());
-            });
-            $("#sub_total").val(total.toFixed(2));
-            tax_sum = (total / 100) * $("#tax").val();
-            $("#tax_amount").val(tax_sum.toFixed(2));
-            $("#total_amount").val((tax_sum + total).toFixed(2));
-        }
-    </script>
 </body>
 
 
-<!-- Mirrored from bestwpware.com/html/tf/duralux-demo/proposal-create.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Jun 2024 06:58:37 GMT -->
+<!-- Mirrored from bestwpware.com/html/tf/duralux-demo/proposal.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Jun 2024 06:58:33 GMT -->
 </html>

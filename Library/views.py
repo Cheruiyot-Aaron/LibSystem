@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout 
-from .models import Category, Book
+from .models import Category, Book, Borrow
+from django.utils import timezone
 
 # Create your views here.
 def home(request):
@@ -86,7 +87,39 @@ def book_instance(request):
     return render(request, 'book_instance.html')
 
 def borrow_book(request):
-    return render(request, 'borrow-book.html')
+    if request.method == 'POST':
+        book_id = request.POST.get('book')
+        due_date = request.POST.get('due_date')
+        student = request.user
+
+        # Create a new Borrow instance
+        Borrow.objects.create(
+            student=student,
+            book_id=book_id,
+            due_date=due_date
+        )
+
+        # Update the available copies of the book
+        book = Book.objects.get(id=book_id)
+        book.available_copies -= 1
+        book.save()
+
+        return redirect('success')  # Redirect to a success page after borrowing
+
+    # Get books that have available copies
+    books = Book.objects.filter(available_copies__gt=0)
+    
+    return render(request, 'borrow-book.html', {'books': books})
+
+def borrowed_books(request):
+    # Get the list of borrowed books for the logged-in user (student)
+    borrows = Borrow.objects.filter(student=request.user)
+
+    # Pass the list of borrowed books to the template
+    context = {
+        'borrows': borrows
+    }
+    return render(request, 'borrowed_books.html', context)
 
 def notifications(request):
     return render(request, 'notifications.html')
