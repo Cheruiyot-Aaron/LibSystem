@@ -14,6 +14,6 @@ urlpatterns = [
     path('borrow-book/', views.borrow_book, name="borrow-book"),    
     path('notifications/', views.notifications, name="logout"),    
     path('book-category/', views.book_category, name="book-category"), 
-    path('view-book/', views.view_book, name="view-book"), 
+    path('view-book/', views.view_book, name="view_book"), 
     path('book-instance/', views.book_instance, name="book-instance"),    
 ]

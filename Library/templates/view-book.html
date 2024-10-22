@@ -2430,12 +2430,12 @@
                                         <table class="table table-striped table-hover">
                                             <thead style="background-color: #f0ad4e; color: white;">
                                                 <tr>
+                                                    <th>#</th> 
                                                     <th>Title</th>
                                                     <th>Author</th>
                                                     <th>ISBN</th>
                                                     <th>Publisher</th>
                                                     <th>Publication Date</th>
-                                                    <th>Total Copies</th>
                                                     <th>Available Copies</th>
                                                     <th>Category</th>
                                                 </tr>
@@ -2444,12 +2444,12 @@
                                                 <!-- Loop through the list of books and display their details -->
                                                 {% for book in books %}
                                                 <tr>
+                                                    <td>{{ forloop.counter }}</td>
                                                     <td>{{ book.title }}</td>
                                                     <td>{{ book.author }}</td>
                                                     <td>{{ book.isbn }}</td>
                                                     <td>{{ book.publisher }}</td>
                                                     <td>{{ book.publication_date }}</td>
-                                                    <td>{{ book.total_copies }}</td>
                                                     <td>{{ book.available_copies }}</td>
                                                     <td>{{ book.category.name }}</td> <!-- Assuming Category has a 'name' field -->
                                                 </tr>
@@ -2458,6 +2458,7 @@
                                                     <td colspan="8" class="text-center">No books available.</td>
                                                 </tr>
                                                 {% endfor %}
+                                                
                                             </tbody>
                                         </table>
                                     </div>

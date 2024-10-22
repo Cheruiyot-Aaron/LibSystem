@@ -95,9 +95,6 @@ def logout_view(request):
     logout(request)
     return redirect('home')
 
-def view_book(request):
-    return render(request, 'view-book.html') 
-
 def book_category(request):
     if request.method == 'POST':
         category_name = request.POST.get('category_name')  # Fetch the category name from form input
@@ -127,6 +124,18 @@ def book_category(request):
 
     # Render the template with the context
     return render(request, 'book-category.html', context) 
+
+def view_book(request):
+    # Query the database for all books
+    books = Book.objects.all()
+    
+    # Pass the books to the template
+    context = {
+        'books': books
+    }
+    
+    # Render the template with the books data
+    return render(request, 'view-book.html', context)
 
 def add_book(request):
     if request.method == 'POST':
