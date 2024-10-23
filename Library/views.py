@@ -1,9 +1,11 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout 
-from .models import Category, Book, Borrow
+from .models import Category, Book, Borrow, BookInstance
 from django.utils import timezone
+from django.http import HttpResponse
+
 
 # Create your views here.
 def home(request):
@@ -87,39 +89,65 @@ def book_instance(request):
     return render(request, 'book_instance.html')
 
 def borrow_book(request):
+    search_query = request.GET.get('search', '')
+    books = Book.objects.filter(available_copies__gt=0, title__icontains=search_query)
+
+    # Handle POST request to borrow a book
     if request.method == 'POST':
         book_id = request.POST.get('book')
         due_date = request.POST.get('due_date')
         student = request.user
 
-        # Create a new Borrow instance
-        Borrow.objects.create(
-            student=student,
-            book_id=book_id,
-            due_date=due_date
-        )
+        # Debugging: Print user type and ensure it is a student
+        print(f"User: {student}, User Type: {student.user_type}")
 
-        # Update the available copies of the book
-        book = Book.objects.get(id=book_id)
-        book.available_copies -= 1
-        book.save()
+        # Check if the user is a student before proceeding
+        if student.user_type == 'student':
+            # Create a new Borrow instance
+            Borrow.objects.create(
+                student=student,
+                book_id=book_id,
+                due_date=due_date
+            )
 
-        return redirect('success')  # Redirect to a success page after borrowing
+            # Update available copies of the book
+            book = Book.objects.get(id=book_id)
+            book.available_copies -= 1
+            book.save()
 
-    # Get books that have available copies
-    books = Book.objects.filter(available_copies__gt=0)
-    
+            return redirect('success')
+        else:
+            return HttpResponse("Only students can borrow books.")
+
+    # If request.method == 'GET', render the borrow book page
     return render(request, 'borrow-book.html', {'books': books})
 
-def borrowed_books(request):
-    # Get the list of borrowed books for the logged-in user (student)
-    borrows = Borrow.objects.filter(student=request.user)
 
-    # Pass the list of borrowed books to the template
+def borrowed_books(request):
+    if request.user.is_authenticated:
+        print(f"User: {request.user}")  # Check if this prints a valid User object
+
+        borrows = Borrow.objects.filter(student=request.user).select_related('book')
+
+        context = {
+            'borrows': borrows
+        }
+        return render(request, 'borrowed-books.html', context)
+    else:
+        return redirect('login') 
+    
+def book_dashboard(request):
+    # Get the total and available copies of books
+    total_books = Book.objects.aggregate(total_copies=Sum('total_copies'))['total_copies']
+    available_books = Book.objects.aggregate(available_copies=Sum('available_copies'))['available_copies']
+
     context = {
-        'borrows': borrows
+        'total_books': total_books,
+        'available_books': available_books,
     }
-    return render(request, 'borrowed_books.html', context)
+    
+    return render(request, 'dashboard.html', context)
+    
 
 def notifications(request):
     return render(request, 'notifications.html')

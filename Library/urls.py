@@ -1,7 +1,7 @@
 
 from django.urls import path, include
 from . import views 
-from .views import (register, reset_password, dashboard, add_book, book_category, borrow_book, book_instance,
+from .views import (register, reset_password, dashboard, add_book, book_category, borrow_book, book_instance, borrowed_books
 )
 
 urlpatterns = [

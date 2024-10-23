@@ -2303,8 +2303,14 @@
             <div class="card stretch stretch-full">
                 <div class="card-body">
                     <!-- Form Starts Here -->
-                    <form method="POST" action="{% url 'borrow-book' %}">
+                    <form method="GET" action="{% url 'borrow-book' %}">
                         {% csrf_token %}
+                    
+                        <!-- Search Field for Books -->
+                        <div class="mb-3">
+                            <label for="search" class="form-label">Search for a Book</label>
+                            <input type="text" name="search" id="search" class="form-control" value="{{ search_query }}" placeholder="Enter book title">
+                        </div>
                     
                         <!-- Student Field (auto-filled and read-only) -->
                         <div class="mb-3">
@@ -2332,6 +2338,7 @@
                         <!-- Submit Button -->
                         <button type="submit" class="btn btn-primary">Borrow Book</button>
                     </form>
+                    
                     
                     <script>
                         $(document).ready(function() {
@@ -3003,6 +3010,39 @@
             tax_sum = (total / 100) * $("#tax").val();
             $("#tax_amount").val(tax_sum.toFixed(2));
             $("#total_amount").val((tax_sum + total).toFixed(2));
+        }
+    </script>
+
+
+    <script>
+        // Function to filter books based on the search input
+        function filterBooks() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const options = document.querySelectorAll('#book option');
+    
+            options.forEach(option => {
+                const bookTitle = option.getAttribute('data-title').toLowerCase();
+                option.style.display = bookTitle.includes(searchInput) ? 'block' : 'none';
+            });
+    
+            // Reset the selection if no matching book is found
+            if (![...options].some(option => option.style.display === 'block')) {
+                document.getElementById('book').selectedIndex = 0;  // Reset to "Select a book"
+            }
+        }
+    
+        // Function to update the due date based on the selected book
+        function updateDueDate() {
+            const dueDateInput = document.getElementById('due_date');
+            const today = new Date();
+            const dueDate = new Date(today);
+            dueDate.setDate(today.getDate() + 5);  // Set due date to 5 days from today
+    
+            // Format the date to YYYY-MM-DD for the input field
+            const dd = String(dueDate.getDate()).padStart(2, '0');
+            const mm = String(dueDate.getMonth() + 1).padStart(2, '0'); // January is 0!
+            const yyyy = dueDate.getFullYear();
+            dueDateInput.value = `${yyyy}-${mm}-${dd}`;
         }
     </script>
 </body>
